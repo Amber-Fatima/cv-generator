@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Resume</title>
+  <!-- Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+    }
+    .resume {
+      background-color: #fff;
+      padding: 30px;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+      color: #007bff;
+    }
+    p {
+      line-height: 1.6;
+    }
+    strong {
+      color: #343a40;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="resume">
+    <h1 class="mb-4">{{user.name}}</h1>
+    <p>{{user.email}}| Phone:{{user.phone}}</p>
+
+    <h2 class="mt-4">About Me</h2>
+    <p>{{user.summary}}</p>
+
+    <h2 class="mt-4">Education</h2>
+    <p><strong>Degree:</strong> {{user.degree}}</p>
+    <p><strong>School:</strong> {{user.school}}</p>
+    <p><strong>University:</strong> {{user.university}}</p>
+
+    <h2 class="mt-4">Work Experience</h2>
+    <p><strong>Professional Experience:</strong> {{user.Work}}</p>
+
+    <h2 class="mt-4">Skills</h2>
+    <p><strong>Skills:</strong> {{user.skills}}</p>
+
+  </div>
+</div>
+
+<!-- Bootstrap JS and Popper.js scripts (required for Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+

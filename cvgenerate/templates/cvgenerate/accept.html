@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Form</title>
+  <!-- Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+    }
+    .resume-form {
+      max-width: 500px;
+      margin: 30px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #007bff;
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+   
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="resume-form">
+    <h1 class="mb-4">Resume Information</h1>
+
+    <form method="POST">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="text" class="form-control" id="number" name="number" placeholder="Enter your phone number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="about">About You:</label>
+        <textarea type="text" class="form-control" id="summary" name="summary"rows="3" placeholder="Tell us about yourself" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="degree">Degree:</label>
+        <input type="text" class="form-control" id="degree" name="degree" placeholder="Enter your degree" required>
+      </div>
+
+      <div class="form-group">
+        <label for="school">School:</label>
+        <input type="text" class="form-control" id="school" name="school" placeholder="Enter your school" required>
+      </div>
+
+      <div class="form-group">
+        <label for="university">University:</label>
+        <input type="text" class="form-control" id="university" name="university" placeholder="Enter your university" required>
+      </div>
+
+      <div class="form-group">
+        <label for="work">Work:</label>
+        <input type="text" class="form-control" id="work" name="work" placeholder="Enter your work information" required>
+      </div>
+
+      <div class="form-group">
+        <label for="skills">Skills:</label>
+        <textarea type="text" class="form-control" id="skills" name="skills"  required ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+      <a href="{% url 'list' %}" class="navbar-btn btn btn-submitted">View Submitted Resume</a>
+    </form>
+  </div>
+</div>
+
+<!-- Bootstrap JS and Popper.js scripts (required for Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+      
+                       
+       
+       
+     
+      
+          
+        
